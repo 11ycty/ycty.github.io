@@ -127,7 +127,7 @@
 </div>
 
     </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+   <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
       
       <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
@@ -446,6 +446,24 @@
 
 
 
+
+
+    <div id="comment"></div>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: '填写leancloud的appid',
+    appKey: '填写leancloud的appkey',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
+</script>
+
+    
 
           </div>
         </div>
@@ -814,6 +832,10 @@
     });
   </script>
   
+
+<script type="text/javascript"
+color="0,0,255" opacity='0.9' zIndex="-1" count="300" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 </body>
 
 </html>
