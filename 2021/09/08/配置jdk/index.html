@@ -471,9 +471,7 @@
 
 
 
-    <div id="comment"></div>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script>
+    <script>
 new Valine({
     el: '#comment' ,
     notify:false, 
@@ -484,7 +482,42 @@ new Valine({
     path:window.location.pathname, 
     avatar:'mm' 
 });
+
+document.body.addEventListener('click', function(e) {
+    if (e.target.classList.contains('vsubmit')) {
+        const email = document.querySelector('input[type=email]');
+        const nick = document.querySelector('input[name=nick]');
+        const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+        if (!email.value || !nick.value || !reg.test(email.value)) {
+            const str = `<div class="valert txt-center"><div class="vtext">请填写正确的昵称和邮箱！</div></div>`;
+            const vmark = document.querySelector('.vmark');
+            vmark.innerHTML = str;
+            vmark.style.display = 'block';
+
+            e.stopPropagation();
+
+            setTimeout(function() {
+                vmark.style.display = 'none';
+                vmark.innerHTML = '';
+            }, 2500);
+        }
+    }
+    }, true);
 </script>
+    
+
+
+    <script>
+new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:false, 
+    appId: 'AS2R8M26MhIOesoVobTOBhY3-gzGzoHsz',
+    appKey: '4wVLYry8Y76cXEeYcNscyAqg',
+    placeholder: 'ヾﾉ≧∀≦)o欢迎评论!',
+    path:window.location.pathname, 
+    avatar:'mm' 
+});
 
 document.body.addEventListener('click', function(e) {
     if (e.target.classList.contains('vsubmit')) {
