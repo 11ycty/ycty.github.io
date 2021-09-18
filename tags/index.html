@@ -316,6 +316,69 @@ var _hmt = _hmt || [];
     
     
 
+
+  
+  <!-- 这里也可用type去判断，放在tags标签页或者categories分类页都可以 -->
+    <hr>
+    <br>
+    
+    <div class="tags">
+        <a href="/tags/java/" style="font-size: 16px; color: #00f">java</a>
+    </div>
+    
+    <!-- 这里也可以放进css文件中，这样阅读性好些 -->
+    <style>
+        .category-list li{
+            display: inline-block;
+            margin: 0 1em .5em 0;
+            padding: 4px;
+            border: 1px solid green;
+            font-size: 1.2em;
+        }
+        .category-list a {
+            color: #ffffff;
+        }
+        .category-list-item {
+          background-color: #55daff;
+          border-radius: 15%;
+          opacity:0.5; 
+        }
+
+        .category-list-item:hover a {
+            color: #c16431;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .category-list-count {
+            margin-left: 2px;
+            font-size: .9em;
+        }
+        .article-entry ul li:before{
+            display: none;
+        }
+        
+        .tags {
+            max-width: 40em;
+            margin: 2em auto;
+            margin-top: 0em;
+        }
+        .tags a {
+            margin-right: 1em;
+            border-bottom: 1px solid blue;
+            line-height: 65px;
+            white-space: nowrap;
+        }
+        .tags a:hover {
+            border-bottom: 2px solid green;
+            font-style: italic;
+            color: #22323a;
+            text-decoration: none;
+        }
+    </style>
+
+
+
+
     
     <div class="page-reward">
       <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
@@ -489,65 +552,6 @@ var _hmt = _hmt || [];
 
 
 
-  
-  <!-- 这里也可用type去判断，放在tags标签页或者categories分类页都可以 -->
-    <hr>
-    <br>
-    
-    <div class="tags">
-        
-    </div>
-    
-    <!-- 这里也可以放进css文件中，这样阅读性好些 -->
-    <style>
-        .category-list li{
-            display: inline-block;
-            margin: 0 1em .5em 0;
-            padding: 4px;
-            border: 1px solid green;
-            font-size: 1.2em;
-        }
-        .category-list a {
-            color: #ffffff;
-        }
-        .category-list-item {
-          background-color: #55daff;
-          border-radius: 15%;
-          opacity:0.5; 
-        }
-
-        .category-list-item:hover a {
-            color: #c16431;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .category-list-count {
-            margin-left: 2px;
-            font-size: .9em;
-        }
-        .article-entry ul li:before{
-            display: none;
-        }
-        
-        .tags {
-            max-width: 40em;
-            margin: 2em auto;
-            margin-top: 0em;
-        }
-        .tags a {
-            margin-right: 1em;
-            border-bottom: 1px solid blue;
-            line-height: 65px;
-            white-space: nowrap;
-        }
-        .tags a:hover {
-            border-bottom: 2px solid green;
-            font-style: italic;
-            color: #22323a;
-            text-decoration: none;
-        }
-    </style>
-
 
           </div>
         </div>
@@ -673,6 +677,10 @@ var _hmt = _hmt || [];
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
