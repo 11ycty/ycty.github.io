@@ -184,8 +184,10 @@ body {
     font-family: Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
     line-height: 1.5;
     color: #333;
-    background-color: #fff;
+    /*background-color: #fff;*/
     min-height: 100%
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    url('https://nbviewer.jupyter.org/github/11ycty/11ycty.github.io/blob/master/photos/1.jpeg') no-repeat 0% 0%/ cover;
 }
 article,
 aside,
@@ -718,7 +720,8 @@ textarea {
 }
 
 body {
-    background: #eaeaea
+    overflow-y:hidden;
+    /*background: #eaeaea*/
 }
 
 #container,
